@@ -1,0 +1,33 @@
+"""
+Use a stack data structure to convert an integer value into binary value.
+"""
+
+class Stack:
+    def __init__(self):
+        self.items = []
+    def push(self, item):
+        self.items.append(item)
+    def is_empty(self):
+        return self.items == []
+    def pop(self):
+        return self.items.pop()
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+    def get_stack(self):
+        return self.items
+
+
+def binary_rep(n):
+    s=Stack()
+    while n > 0:
+        s.push(n%2)
+        n//=2
+    bin_num=""
+
+    while not s.is_empty():
+        bin_num += str(s.pop())
+
+    return bin_num
+k=int(input("Enter a number: \n"))
+print(binary_rep(k))
