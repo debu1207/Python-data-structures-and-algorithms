@@ -1,0 +1,21 @@
+"""
+Bachgold problem is very easy to formulate. Given a positive integer n represent it as a sum of maximum possible number of prime numbers.
+One can prove that such representation exists for any integer greater than 1.
+Recall that integer k is called prime if it is greater than 1 and has exactly two positive integer divisors — 1 and k.
+"""
+n= int(input())
+def output(n):
+     if n%2==0:
+          print(n//2)
+          for i in range(n//2):
+               print(2,end=" ")
+     else:
+          I=[]
+          print((n-3)//2 + 1)
+          for i in range((n-3)//2):
+               I.append(2)
+          I.append(3)
+          for i in I:
+               print(i,end=" ")
+output(n)
+
