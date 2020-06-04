@@ -1,0 +1,23 @@
+"""
+An n × n table a is defined as follows:
+
+The first row and the first column contain ones, that is: ai, 1 = a1, i = 1 for all i = 1, 2, ..., n.
+Each of the remaining numbers in the table is equal to the sum of the number above it and the number to the left of it. 
+In other words, the remaining elements are defined by the formula ai, j = ai - 1, j + ai, j - 1.
+These conditions define all the values in the table.
+
+You are given a number n. You need to determine the maximum value in the n × n table defined by the rules above.
+"""
+n=int(input())
+I,main=[],[]
+for i in range(n):
+     I.append(1)
+main.append(I)
+def large(main,i,n):
+     k=[1]
+     for j in range(1,n):
+          k.append(main[i][j]+k[j-1])
+     main.append(k)     
+for i in range(n-1):
+     large(main,i,n)
+print(main[n-1][n-1])
