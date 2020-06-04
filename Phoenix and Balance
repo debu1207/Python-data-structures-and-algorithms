@@ -1,0 +1,30 @@
+"""
+Phoenix has n coins with weights 21,22,…,2n. He knows that n is even.
+He wants to split the coins into two piles such that each pile has exactly n2 coins and the difference of weights between the two piles is minimized. Formally, let a denote the sum of weights in the first pile, and b denote the sum of weights in the second pile. 
+Help Phoenix minimize |a−b|, the absolute value of a−b.
+INPUT
+The input consists of multiple test cases. The first line contains an integer t (1≤t≤100) — the number of test cases.
+The first line of each test case contains an integer n (2≤n≤30; n is even) — the number of coins that Phoenix has.
+OUTPUT
+For each test case, output one integer — the minimum possible difference of weights between the two piles.
+"""
+n= int(input())
+I=[]
+for i in range(n):
+     k=int(input())
+     I.append(k)
+def output(x):
+     m,s,a=[],[],0
+     for i in range(1,x+1):
+          m.append(2**i)
+     b,g=m[-1],x-(x//2)-2
+     if x==2:
+          return abs(m[1]-m[0])
+     else:
+          for i in range(1,x//2+1):
+               a+=m[-i-1]
+          for i in range(0,g+1):
+               b+=m[i]
+          return abs(b-a)
+for i in range(n):
+     print(output(I[i]))
