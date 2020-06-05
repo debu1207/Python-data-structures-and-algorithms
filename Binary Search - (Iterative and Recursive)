@@ -1,0 +1,42 @@
+# Binary Search Algorithm
+
+data =[1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 35, 38, 64, 73]
+target= 13
+
+# Linear Search Algorithms
+def linear_search(data, target):
+    for i in range(len(data)):
+        if data[i] == target:
+            return True
+    return False
+
+# Iterative Binary Search
+def Binary_iterative(data, target):
+    low = 0
+    high = len(data)
+
+    while low <= high:
+        mid = (low + high) // 2
+        if target == data[mid]:
+            return True
+        elif target < data[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return False
+
+# Recursive Binary search
+def Recursive_binary_search(data, target, low, high):
+    if low > high:
+        return False
+    else:
+        mid = (low + high) // 2
+        if target == data[mid]:
+            return True
+        elif target < data[mid]:
+            return Recursive_binary_search(data, target, low, mid-1)
+        else:
+            return Recursive_binary_search(data, target, mid + 1, high)
+
+print(Binary_iterative(data, target))
+print(Recursive_binary_search(data, target, 0, len(data)
