@@ -1,6 +1,6 @@
 """
                              STRING PROCESSING:
-LOOK-and-SAY SEQUENCE  (link for explanation: https://en.m.wikipedia.org/wiki/Look-and-say_sequence )
+LOOK-and-SAY SEQUENCE  (Link for explanation: https://en.m.wikipedia.org/wiki/Look-and-say_sequence )
  Problem: Given some integer, n. Determine the nth term in the "look-and-say" sequence.
  Example:
      For n = 4, the 4th term in the sequence is 1211.
