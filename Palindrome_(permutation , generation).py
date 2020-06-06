@@ -59,3 +59,12 @@ print(is_palin_perm(palin_perm))
 print(generate_palin(palin_perm))
 print(is_palin_perm(not_palin_perm))
 print(generate_palin(not_palin_perm))
+
+"""
+OUTPUT:
+
+True
+Possible palindrome : tacocat
+True
+Possible palindrome : waasitctisaaw
+"""
