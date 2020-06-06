@@ -12,6 +12,7 @@ not_palin_perm = "was it a cat i saw"
 # Time complexity = O(n)
 # Space Complexity = O(n)
 
+
 def is_palin_perm(input_str):
     input_str = input_str.replace(" ","")
     input_str = input_str.lower()
@@ -31,6 +32,12 @@ def is_palin_perm(input_str):
             return False
     return True
 
+def rev_str(s):
+  str = ""
+  for i in s:
+    str = i + str
+  return str
+
 def generate_palin(input_str):
     input_str = input_str.replace(" ","").lower()
     if is_palin_perm(input_str) == False:
@@ -43,17 +50,13 @@ def generate_palin(input_str):
         else: d[i] = 1
 
     palin = ""
-    rev_pal = ""
     for k,v in d.items():
         if v % 2==0:
             palin += (v//2)*str(k)
         else:
             palin += str(k)
 
-    for i in range(2, len(palin)+1):
-        rev_pal += palin[-i]
-
-    return "Possible palindrome : "+palin + rev_pal
+    return "Possible palindrome : "+palin + rev_str(palin[:len(palin)-1])
 
 print(is_palin_perm(palin_perm))
 print(generate_palin(palin_perm))
@@ -61,10 +64,11 @@ print(is_palin_perm(not_palin_perm))
 print(generate_palin(not_palin_perm))
 
 """
-OUTPUT:
+OUTPUT: 
 
 True
 Possible palindrome : tacocat
 True
 Possible palindrome : waasitctisaaw
 """
+
