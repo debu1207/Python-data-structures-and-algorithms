@@ -5,6 +5,7 @@
 perm_1 = input("Enter a word: \n")
 perm_2 = input("Enter another word: \n")
 
+# Using Hashtables
 def check_perm(str1,str2):
     str1 =str1.lower()
     str2 =str2.lower()
@@ -30,6 +31,7 @@ def check_perm(str1,str2):
             return False
     return True
 
+# Without using hashtables
 def check_perm_2(str1, str2):
     str1 = str1.lower()
     str2 = str2.lower()
