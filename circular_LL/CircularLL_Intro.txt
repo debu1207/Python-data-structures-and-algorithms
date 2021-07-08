@@ -1,0 +1,12 @@
+CircularLL_Intro
+
+It is a linked list where all nodes are connected to form a circle. There is no NULL at the end. A circular linked list can be singly circular linked list or doubly cirular linked list.
+
+ADVANTAGES:
+1. Any node can be a starting node. We can traverse the whole list by starting from any point.
+
+2. It is useful for implementation of queue. We can maintain a pointer to the lat inserted node and front can always be obtained as next of last.
+
+3. Circular lists are useful in applications to repeatedly go around the list. Used in operating system.
+
+4. Circular doubly linked lists are used for implementaiton of advanced data structures like fibonacci Heap. 

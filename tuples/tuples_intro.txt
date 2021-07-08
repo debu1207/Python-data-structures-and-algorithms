@@ -1,0 +1,67 @@
+Tuples in python
+
+A tumple is a collectoin of python objects separated by commas. In someways a tuple is similar to a list in terms of indexing, nested objects and repetition but a tuple is immuntable unlike list which are mutable.
+
+Creating Tuples
+
+empty_tuple = ()
+print(empty_tuple)
+
+# one way of creating tuples
+
+tup = 'python', 'debu'
+
+# other way of creating tuples
+
+tup = ('python', 'debu')
+
+
+Concatenation of tuples:
+
+tuple1 = (0, 1, 2, 3)
+tuple2 = ('python', 'debu')
+print(tuple1 + tuple2)
+# concatenating above two
+output:
+ (0,1,2,3,'python', 'debu')
+
+
+Nesing of tuples
+
+tuple1 = (0, 1, 2, 3)
+tuple2 = ('python', 'debu')
+tuple3 = (tuple1, tuple2)
+print(tuple3)
+Output :
+
+((0, 1, 2, 3), ('python', 'debu'))
+
+
+slicing in tuples:
+
+tuple = (0,1,2,3)
+print(tuple[1:])
+
+output: (1,2,3)
+
+pritn(tuple[::-1])
+outpu: (3,2,1,0)
+
+
+deleting a tuple:
+
+tuple = (0,1)
+del tuple
+
+length of tuple:
+print(len(tuple))
+
+converting list to a tuple:
+
+list1 = [0,1,2]
+print(tuple(list1))
+
+print(tuple('python')) # string python
+output: 
+  ('p', 'y', 't', 'h', 'o', 'n')
+

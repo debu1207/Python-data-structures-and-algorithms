@@ -1,0 +1,14 @@
+Doubly linked list - Introduction and insertion
+
+A Doubly linked list (DLL) contains a extra pointer, typically called previous pointer, together with enxt pointer and data which are there in singly linked list.
+
+Advantages over sinlgy linked list:
+
+1. DLL can be traversed in both directions.
+2. Delete operation in dll is more efficient
+3. Can quickly insert a new node before a given node.
+
+Disadvantages over singly linked list:
+
+1. DLL require extra space for an previous pointer.
+2. All Operations require an extra pointer previous to be maintained. 

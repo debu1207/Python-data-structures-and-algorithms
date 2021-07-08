@@ -1,0 +1,23 @@
+Trie 
+
+Trie is an efficient information retrieval data structure. 
+Using Trie, we can search the key in O(m) time. 
+However the penalty is on Trie storage requirements.
+
+Every node of Trie consists of multiple branches.
+Each branch represents a possible character of keys.
+We need to mark the last node of every key as end of word node.
+A Trie node field isEndOfWord is used to distinguish the node as end of word node.
+A simple structure to represent nodes of the English alphabet can be as 
+following.
+
+Inserting a key into Trie is a simple approach. Every character of the input key
+is inserted as an individual Trie node.
+
+Children ia an array of pointers to next level trie nodes.
+The key character acts as an index into the array children.
+If the input key is new or an extension of the existing key, we need to 
+construct non-existing nodes of the key, and mark end of the word for the last node.
+
+
+
